@@ -31,7 +31,7 @@
 <body>
     <div id="root">
         <ul>
-            <li></li>
+            <li v-for="email in emails" :key="email">{{ email }}</li>
         </ul>
     </div>
 </body>

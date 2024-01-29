@@ -11,10 +11,11 @@ const app = createApp({
         };
     },
     created() {
-        axios.get(endpoint).then(res => {
-            console.log('API obj:', res.data);
-            this.emails.push(res.data.response);
-        })
+        for (let i = 0; i < 10; i++) {
+            axios.get(endpoint).then(res => {
+                this.emails.push(res.data.response);
+            });
+        }
     },
 });
 app.mount('#root');
