@@ -30,7 +30,7 @@
 
 <body>
     <div id="root">
-        <ul>
+        <ul v-if="!loading">
             <li v-for="email in emails" :key="email">{{ email }}</li>
         </ul>
     </div>
