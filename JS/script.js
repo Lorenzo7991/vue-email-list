@@ -12,9 +12,7 @@ const app = createApp({
         };
     },
     created() {
-        if (!this.loading) {
-            return;
-        }
+        if (!this.loading) return;
         for (let i = 0; i < 10; i++) {
             axios.get(endpoint).then(res => {
                 this.emails.push(res.data.response);
